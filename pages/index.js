@@ -11,44 +11,45 @@ import TITLE from './helper/constant';
 
 //import { NamedExport } from 'some library/location'
 import { CONTENT } from './helper/constant2';
+import Link from 'next/link';
 
 //2. defenation area
- function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{ TITLE }</title>
-        <meta name="description" content= { CONTENT } />
+        <title>{TITLE}</title>
+        <meta name="description" content={CONTENT} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to my Website
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>
+          <Link href="/about"> About Us</Link>
+        </h1>
+
+        <h1 className={styles.title}>
+          <Link href="/contact">Contact Us</Link>
+        </h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/Lucknow/hotel" className={styles.card}>
+            <h2>Lucknow &rarr;</h2>
+            <p>Click Here to find hotels in Lucknow.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/Bhopal/Hotel" className={styles.card}>
+            <h2>Bhopal &rarr;</h2>
+            <p>Click Here to findHotels in Bhopal!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/Prayagraj/Hotel" className={styles.card}>
+            <h2>Prayagraj &rarr;</h2>
+            <p>Click Here to findHotels in Bhopal!</p>
           </a>
 
           <a
